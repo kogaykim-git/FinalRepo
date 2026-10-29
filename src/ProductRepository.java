@@ -1,8 +1,9 @@
 import java.util.List;
 
 /**
- * Метод для поиска продукта по его ID
- * @author Kogay K.V.
+ * Поиск пользователя по id
+ * @return product
+ * @throws ProductNotFoundException
  */
 public interface ProductRepository {
     Product findProduct(Long id);

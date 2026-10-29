@@ -12,7 +12,7 @@ public class ProductRepositoryImpl implements ProductRepository{
         Product findProduct = productList.stream()
                 .filter(e-> e.getId() == id)
                 .findFirst()
-                .orElseThrow(()-> new ProductNotFoundException("Product not found"));
+                .orElseThrow(()-> new ProductNotFoundException(id));
         return findProduct;
     }
 }
