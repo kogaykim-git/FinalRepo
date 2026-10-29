@@ -1,7 +1,7 @@
 public class Product {
-    private Long id;
-    private String name;
-    private int price;
+    private final Long id;
+    private final String name;
+    private final int price;
 
     public Product(Long id, String name, int price) {
         this.id = id;
