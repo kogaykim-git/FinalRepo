@@ -11,7 +11,8 @@ public class ProductRepositoryImpl implements ProductRepository{
     public Product findProduct(Long id) {
         Product findProduct = productList.stream()
                 .filter(e-> e.getId() == id)
-                .findFirst().get();
+                .findFirst()
+                .orElseThrow(()-> new ProductNotFoundException("Product not found"));
         return findProduct;
     }
 }
