@@ -8,5 +8,7 @@ import java.util.List;
 public interface ProductRepository {
     Product findProduct(Long id);
 
-    Product removeProduct(Long id);
+    Product findMaxProduct();
+
+    Product findMinProduct();
 }
