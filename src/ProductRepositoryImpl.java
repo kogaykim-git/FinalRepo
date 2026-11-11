@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 
 public class ProductRepositoryImpl implements ProductRepository{
@@ -15,4 +16,21 @@ public class ProductRepositoryImpl implements ProductRepository{
                 .orElseThrow(()-> new ProductNotFoundException(id));
         return findProduct;
     }
+
+    @Override
+    public Product findMaxProduct() {
+        Product maxProduct = productList.stream()
+                .max(Comparator.comparing(e-> e.getPrice()))
+                .orElseThrow(() -> new IllegalArgumentException("Max price not found"));
+        return maxProduct;
+    }
+
+    @Override
+    public Product findMinProduct() {
+        Product minProduct = productList.stream()
+                .min(Comparator.comparing(e-> e.getPrice()))
+                .orElseThrow(() -> new IllegalArgumentException("Min product not found"));
+        return minProduct;
+    }
+
 }
