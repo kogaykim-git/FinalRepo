@@ -1,0 +1,78 @@
+name: Отчет об ошибке (Bug Report)
+description: Сообщить о проблеме или ошибке в работе проекта
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за то, что помогаете сделать проект лучше! Пожалуйста, заполните форму ниже.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Описание ошибки
+      description: Четко и понятно опишите, в чем заключается проблема.
+      placeholder: При нажатии на кнопку X происходит Y...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения
+      description: Как нам повторить эту ошибку?
+      value: |
+        1. Перейти на страницу '...'
+        2. Нажать на '...'
+        3. Прокрутить вниз до '...'
+        4. Увидеть ошибку
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение
+      description: Что должно было произойти на самом деле?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: В каком браузере наблюдается проблема?
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Другой (укажите ниже)
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия проекта / ОС
+      description: Укажите версию приложения и вашу операционную систему.
+      placeholder: например, v1.2.0 / Windows 11
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи или скриншоты
+      description: Вставьте текст ошибки или перетащите сюда скриншоты.
+      render: shell
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Подтверждение
+      options:
+        - label: Я проверил(а), что такой ошибки еще нет в списке открытых Issues.
+          required: true
