@@ -1,0 +1,30 @@
+name: Предложение новой функции (Feature Request)
+description: Предложить идею или улучшение для этого проекта
+title: "[Feature]: "
+labels: ["enhancement"]
+
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему решает эта функция?
+      description: Опишите, с какой трудностью вы сталкиваетесь сейчас.
+      placeholder: Мне всегда неудобно делать X, когда происходит Y...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Опишите желаемое решение
+      description: Как именно должна работать новая функция?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Рассмотренные альтернативы
+      description: Есть ли другие способы решить эту задачу, которые вы пробовали?
+    validations:
+      required: false
