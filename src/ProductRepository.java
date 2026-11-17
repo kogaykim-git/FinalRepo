@@ -11,4 +11,10 @@ public interface ProductRepository {
     Product findMaxProduct();
 
     Product findMinProduct();
+
+    /**
+     * Поиск средней цены среди всех продуктов
+     * @return Product
+     */
+    double findAveragePrice();
 }
