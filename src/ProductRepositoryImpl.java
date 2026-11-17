@@ -34,4 +34,13 @@ public class ProductRepositoryImpl implements ProductRepository{
         return minProduct;
     }
 
+    @Override
+    public double findAveragePrice() {
+        double averagePrice = productList.stream()
+                .mapToInt(e->e.getPrice())
+                .average()
+                .orElseThrow(() -> new IllegalArgumentException("Price not found"));
+        return averagePrice;
+    }
+
 }

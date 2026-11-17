@@ -11,4 +11,6 @@ public interface ProductRepository {
     Product findMaxProduct();
 
     Product findMinProduct();
+
+    double findAveragePrice();
 }
