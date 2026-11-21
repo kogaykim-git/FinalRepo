@@ -1,12 +1,12 @@
 public class Product {
     private final Long id;
     private final String name;
-    private final int price;
+    private final int price1;
 
     public Product(Long id, String name, int price) {
         this.id = id;
         this.name = name;
-        this.price = price;
+        this.price1 = price;
     }
 
     public Long getId() {
@@ -18,7 +18,7 @@ public class Product {
     }
 
     public int getPrice() {
-        return price;
+        return price1;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price=" + price +
+                ", price=" + price1 +
                 '}';
     }
 }
