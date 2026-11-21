@@ -46,6 +46,8 @@ public class ProductRepositoryImpl implements ProductRepository{
     @Override
     public void devB() {
         System.out.println("Dev B");
+    public void devA() {
+        System.out.println("hello from dev A");
     }
 
 }

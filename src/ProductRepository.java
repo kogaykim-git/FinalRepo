@@ -19,4 +19,5 @@ public interface ProductRepository {
     double findAveragePrice();
 
     void devB();
+    void devA();
 }
