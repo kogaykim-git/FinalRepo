@@ -43,4 +43,9 @@ public class ProductRepositoryImpl implements ProductRepository{
         return averagePrice;
     }
 
+    @Override
+    public void devB() {
+        System.out.println("Dev B");
+    }
+
 }
